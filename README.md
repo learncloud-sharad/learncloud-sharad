@@ -101,7 +101,7 @@ Each project gets its own repository with a README, architecture diagram and ste
 
 | # | Project | Tech | Status |
 |---|---|---|---|
-| 1 | End-to-end pipeline: raw data to analytics-ready tables | Python, Snowflake, SQL | 🔨 **In progress** |
+| 1 |    | 1 | [Telecom MNP Analytics Pipeline](https://github.com/learncloud-sharad/telecom-mnp-snowflake-pipeline): CSV → Snowflake RAW → STAGE → DW star schema → MART KPIs | Snowflake, SQL | ✅ Done ||
 | 2 | Medallion Architecture pipeline (Bronze / Silver / Gold) | Databricks, PySpark, Delta Lake | 🔜 Next |
 | 3 | Scheduled, orchestrated pipeline | Airflow, Python, Snowflake | 🔜 Later |
 
