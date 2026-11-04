@@ -88,6 +88,7 @@ I'm moving into Data Engineering from a **Technical Support (SQL / Linux)** role
 
 | Repository | What's inside |
 |---|---|
+| ❄️ [telecom-mnp-snowflake-pipeline](https://github.com/learncloud-sharad/telecom-mnp-snowflake-pipeline) | End-to-end Snowflake ELT pipeline: stage, COPY INTO, star schema, KPI views |
 | 🗄️ [Sql](https://github.com/learncloud-sharad/Sql) | SQL practice: joins, window functions, CTEs, stored procedures, indexing, query optimization |
 | 🐍 [Python-Practice](https://github.com/learncloud-sharad/Python-Practice) | Python exercises toward data pipeline work |
 
@@ -101,19 +102,19 @@ Each project gets its own repository with a README, architecture diagram and ste
 
 | # | Project | Tech | Status |
 |---|---|---|---|
-| 1 | Telecom MNP Analytics Pipeline  | SQL, Snowflake | (https://github.com/learncloud-sharad/telecom-mnp-snowflake-pipeline): CSV → Snowflake RAW → STAGE → DW star schema → MART KPIs | Snowflake, SQL | ✅ Done ||
-| 2 | Medallion Architecture pipeline (Bronze / Silver / Gold) | Databricks, PySpark, Delta Lake | 🔜 Next |
+| 1 | [Telecom MNP Analytics Pipeline](https://github.com/learncloud-sharad/telecom-mnp-snowflake-pipeline): CSV → Snowflake RAW → STAGE → DW star schema → MART KPIs | Snowflake, SQL | ✅ **Done** |
+| 2 | Medallion Architecture pipeline (Bronze / Silver / Gold) | Databricks, PySpark, Delta Lake | 🔨 **Next up** |
 | 3 | Scheduled, orchestrated pipeline | Airflow, Python, Snowflake | 🔜 Later |
 
 **Project 1 flow**
 
 ```mermaid
 flowchart LR
-    A["Source Data<br/>CSV / API"] --> B["Python<br/>Ingestion"]
-    B --> C[("Snowflake<br/>Raw")]
-    C --> D["SQL<br/>Transformations"]
-    D --> E[("Snowflake<br/>Analytics")]
-    E --> F["Reports /<br/>Insights"]
+    A["CSV files"] --> B["Internal Stage"]
+    B -->|"COPY INTO"| C[("RAW")]
+    C --> D["STAGE<br/>cleaning"]
+    D --> E[("DW<br/>star schema")]
+    E --> F["MART<br/>KPI views"]
 ```
 
 ---
@@ -123,7 +124,8 @@ flowchart LR
 | Status | Skill |
 |---|---|
 | ✅ | SQL: production experience, tuning in progress |
-| 🔄 | Snowflake · Python · PySpark · Databricks & Delta Lake |
+| ✅ | Snowflake: end-to-end pipeline built (stage, COPY INTO, star schema, views) |
+| 🔄 | Python · PySpark · Databricks & Delta Lake |
 | 🔄 | Git & GitHub · Microsoft Fabric (DP-600 / DP-700 prep) |
 | 🔜 | Airflow · Kafka & Structured Streaming · AWS data services |
 
